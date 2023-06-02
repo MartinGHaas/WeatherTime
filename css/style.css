@@ -1,0 +1,280 @@
+/* Font Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --default-font: 'Montserrat', sans-serif;
+
+    --clr-default: #525cb6;
+
+    --default-white: #fff;
+    --default-black: #000;
+
+    --clr-gradient1: #eee;
+    --clr-gradient2: #e3e3e3;
+    --clr-gradient-mobile: #d9d9d9;
+
+    --clr-cold: #6565ff;
+    --clr-hot: #ff4848;
+
+    --intro-width: 31.25vw;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: var(--default-font);
+}
+
+.d-flex-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    height: 94.8%;
+    margin: auto 0;
+}
+
+.main-section {
+    height: 100%;
+}
+
+.intro-section {
+    width: var(--intro-width);
+    background: var(--clr-default);
+}
+
+.content-section {
+    width: calc(100vw - var(--intro-width));
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    width: 84.4%;
+}
+
+.logo {
+    background: var(--default-white);
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo-svg {
+    width: 70px;
+}
+
+.title {
+    color: var(--default-white);
+    font-weight: 800;
+    font-size: 2.82rem;
+    margin-left: 0.8rem;
+}
+
+#searchbar {
+    width: 100%;
+    height: 70px;
+    background: var(--default-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid var(--default-black);
+    border-radius: 20px;
+    margin-top: 3rem;
+}
+
+#search-input {
+    outline: none;
+    border: none;
+    margin-left: 1.1rem;
+    font-size: 1.75rem;
+    width: 40%;
+    min-width: 190px;
+}
+
+#search-input::placeholder {
+    color: var(--default-black);
+}
+
+.search-button {
+    border: none;
+    cursor: pointer;
+    margin-right: 1.2rem;
+}
+
+#search-img {
+    width: 38.59px;
+}
+
+#historic {
+    width: 100%;
+    margin-top: 3rem;
+    color: var(--default-white);
+}
+
+.scroll-section {
+    width: 100%;
+    margin-top: 1.7rem;
+}
+
+.historic-text {
+    margin-right: auto;
+}
+
+.historic-none {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.historic-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* MAIN */
+
+.main-content {
+    width: 95%;
+}
+
+.title-main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.city-name {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.time-place {
+    font-size: 2rem;
+}
+
+.main-weather {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.weather {
+    background: linear-gradient(180deg, #EEEEEE 0%, #E3E3E3 100%);
+    border-radius: 20px;
+    width: 45.6%;
+    height: 519px;
+}
+
+.weather-container {
+    margin: 1.5rem .5rem 0rem 1.8rem;
+    height: 95%;
+}
+
+#now-weather {
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#next-days {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.weather-title {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* Tempo atual */
+
+#temp-svg {
+    width: 78px;
+}
+
+#wind-svg {
+    width: 87px;
+}
+
+#max-min-svg {
+    width: 71px;
+}
+
+.weather-content {
+    width: 93.24%;
+    height: 70%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weather-text {
+    font-size: 1.7rem;
+}
+
+.weather-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.wind {
+    margin-left: auto;
+}
+
+.weather-text-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: .7rem;
+}
+
+#wind-text {
+    margin-right: .7rem;
+}
+
+/* next days */
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-week {
+    font-weight: 800;
+    transform: translateY(-8px);
+}
+
+.max-min-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    gap: 2%;
+}
+
+.svg-temp {
+    width: 40px;   
+    margin-left: 5%;
+}
