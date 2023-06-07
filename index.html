@@ -22,7 +22,7 @@
                 <!---->
                 <div id="searchbar">
                     <input type="text" placeholder="Digite um local" id="search-input">
-                    <button class="search-button">
+                    <button id="search-button" style="background-color: #fff;" onclick="callAPI()">
                         <img src="img/search.svg" alt="Pesquisar" id="search-img">
                     </button>
                 </div>
@@ -42,8 +42,8 @@
         <div class="main-section content-section d-flex-main">
             <div class="container d-flex-main main-content">
                 <div class="title-main">
-                    <h3 class="city-name">London, GB</h3>
-                    <p class="time-place">Horário do Local: 18:23</p>
+                    <h3 id="city-name">London, GB</h3>
+                    <p class="time-place">Horário do Local: <span id="hora-local">18:23</span></p>
                 </div>
                 <div class="main-weather">
                     <div class="weather" id="now-weather">
@@ -54,8 +54,8 @@
                                 <div class="temp weather-section">
                                     <img id="temp-svg" src="img/high-temperature-svgrepo-com.svg" alt="Temperatura Atual">
                                     <div class="weather-text-content">
-                                        <p class="weather-text">Temperatura:  20°C</p>
-                                        <p class="weather-text">Sensação Térmica: 22°C</p>
+                                        <p class="weather-text" id="temp">Temperatura:  20°C</p>
+                                        <p class="weather-text" id="temp-sensation">Sensação Térmica: 22°C</p>
                                     </div>
                                 </div>
 
@@ -69,8 +69,8 @@
                                 <div class="max-min weather-section">
                                     <img id="max-min-svg" src="img/up-down-arrows-icon.svg" alt="Temperatura Máxima e Mínima">
                                     <div class="weather-text-content">
-                                        <p class="weather-text mm-text">Temp. Máxima: 27°C</p>
-                                        <p class="weather-text mm-text">Temp. Mínima: 15°C</p>
+                                        <p class="weather-text mm-text" id="max-temp">Temp. Máxima: 27°C</p>
+                                        <p class="weather-text mm-text" id="min-temp">Temp. Mínima: 15°C</p>
                                     </div>                                    
                                 </div>
                             </div>
@@ -84,49 +84,49 @@
 
                                 <div class="weather-section">
                                     <div class="date">
-                                        <span class="weather-text">27/05</span><span class="date-week">sab</span>
+                                        <span class="weather-text date-day">27/05</span><span class="date-week">sab</span>
                                     </div>
                                     <div class="max-min-content">
                                         <img class="min-temp svg-temp" src="img/min-arrow.svg" alt="">
-                                        <span class="weather-text">15°C</span>
+                                        <span class="weather-text min-temp-text">15°C</span>
                                         <img class="max-temp svg-temp" src="img/max-arrow.svg" alt="">
-                                        <span class="weather-text">30°C</span>
+                                        <span class="weather-text max-temp-text">30°C</span>
                                     </div>
                                 </div>
 
                                 <div class="weather-section">
                                     <div class="date">
-                                        <span class="weather-text">28/05</span><span class="date-week">dom</span>
+                                        <span class="weather-text date-day">28/05</span><span class="date-week">dom</span>
                                     </div>
                                     <div class="max-min-content">
                                         <img class="min-temp svg-temp" src="img/min-arrow.svg" alt="">
-                                        <span class="weather-text">15°C</span>
+                                        <span class="weather-text min-temp-text">15°C</span>
                                         <img class="max-temp svg-temp" src="img/max-arrow.svg" alt="">
-                                        <span class="weather-text">30°C</span>
+                                        <span class="weather-text max-temp-text">30°C</span>
                                     </div>
                                 </div>
 
                                 <div class="weather-section">
                                     <div class="date">
-                                        <span class="weather-text">29/05</span><span class="date-week">seg</span>
+                                        <span class="weather-text date-day">29/05</span><span class="date-week">seg</span>
                                     </div>
                                     <div class="max-min-content">
                                         <img class="min-temp svg-temp" src="img/min-arrow.svg" alt="">
-                                        <span class="weather-text">15°C</span>
+                                        <span class="weather-text min-temp-text">15°C</span>
                                         <img class="max-temp svg-temp" src="img/max-arrow.svg" alt="">
-                                        <span class="weather-text">30°C</span>
+                                        <span class="weather-text max-temp-text">30°C</span>
                                     </div>
                                 </div>
 
                                 <div class="weather-section">
                                     <div class="date">
-                                        <span class="weather-text">30/05</span><span class="date-week">ter</span>
+                                        <span class="weather-text date-day">30/05</span><span class="date-week">ter</span>
                                     </div>
                                     <div class="max-min-content">
                                         <img class="min-temp svg-temp" src="img/min-arrow.svg" alt="">
-                                        <span class="weather-text">15°C</span>
+                                        <span class="weather-text min-temp-text">15°C</span>
                                         <img class="max-temp svg-temp" src="img/max-arrow.svg" alt="">
-                                        <span class="weather-text">30°C</span>
+                                        <span class="weather-text max-temp-text">30°C</span>
                                     </div>
                                 </div>
                             </div>
@@ -136,6 +136,9 @@
             </div>
         </div>
 
+        <script src="js/geolocate.js"></script>
+        <script src="js/horas.js"></script>
+        <script src="js/next_days.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>
