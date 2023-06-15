@@ -15,6 +15,7 @@ function success(position) {
 
 function error(error) {
     console.warn(`ERROR(${error.code}): ${error.message}`);
+    getDataAPI('londres');
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);

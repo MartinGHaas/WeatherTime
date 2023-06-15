@@ -26,11 +26,11 @@ const apiKey = '2c7a1985e25aab3a0165a4e1ce5872c4';
 const callAPI = () => {
     if(input.value === 0) return;
 
-    getDataAPI();
+    getDataAPI(input.value);
 }
 
-async function getDataAPI() {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input.value)}&appid=${encodeURI(apiKey)}&lang=pt_br&units=metric`;
+async function getDataAPI(cidade) {
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cidade)}&appid=${encodeURI(apiKey)}&lang=pt_br&units=metric`;
 
     const response = await fetch(url);
     const data = await response.json();
@@ -40,8 +40,9 @@ async function getDataAPI() {
         return;
     }
     loadData(data);
-    getData5d(input.value);
+    getData5d(cidade);
     calcHoras(data);
+    addToLocalStorage(city.innerHTML, temp.innerHTML.split(' ')[1]);
 }
 
 function loadData(data) {
@@ -59,4 +60,5 @@ async function getLatAPI(lat, lon) {
     loadData(data);
     getData5d(city.innerHTML.split(','[0]));
     calcHoras(data);
+    addToLocalStorage(city.innerHTML, temp.innerHTML.split(' ')[1]);
 }

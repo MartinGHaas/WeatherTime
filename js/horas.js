@@ -1,16 +1,16 @@
 function calcHoras(data) {
-    let agora = new Date();
+    const agora = new Date();
 
-    let tzLocal = agora.getTimezoneOffset()*60;
-    let tzAlvo = data.timezone;
+    const tzLocal = agora.getTimezoneOffset()*60;
+    const tzAlvo = data.timezone;
     
-    let dtLocal = agora.getTime();
-
+    const dtLocal = data.dt*1000;
+    console.log(dtLocal);
     // calcula a diferença de horas
-    let diferencaEmHr = calcDiff(tzAlvo, tzLocal)/3600;
+    const diferencaEmHr = calcDiff(tzAlvo, tzLocal)/3600;
     
-    let novoDt = dtLocal + (diferencaEmHr*3600000);
-    let novaData = new Date(novoDt);    
+    const novoDt = dtLocal + (diferencaEmHr*3600000);
+    const novaData = new Date(novoDt);    
 
     loadNovaData(novaData);
 }

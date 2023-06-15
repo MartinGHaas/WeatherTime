@@ -113,7 +113,7 @@ body {
 }
 
 #search-input::placeholder {
-    color: var(--default-black);
+    color: #303030;
 }
 
 #search-button {
@@ -135,6 +135,24 @@ body {
 .scroll-section {
     width: 100%;
     margin-top: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 45vh;
+    overflow-y: auto;
+}
+
+.scroll-section::-webkit-scrollbar {
+    width: 6.5px;
+    background: #f1f1f1;
+    border-radius: 50px;
+    box-shadow: inset 1.5px 0px 1px rgba(0, 0, 0, 0.5);
+}
+.scroll-section::-webkit-scrollbar-thumb {
+    background: rgb(255, 60, 60);
+    border-radius: 50px;
+    box-shadow: inset 1.5px .5px 1px rgba(0, 0, 0, 0.5),
+    inset -.5px -.5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .historic-text {
@@ -233,7 +251,7 @@ body {
 }
 
 .weather-text {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 .weather-section {
@@ -280,4 +298,46 @@ body {
 .svg-temp {
     width: 40px;   
     margin-left: 5%;
+}
+
+/* Slider */
+.item-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.bg-img {
+    background: var(--default-white);
+    border-radius: 20px;
+    width: 90px;
+    height: 90px;
+    justify-content: center;
+}
+
+.img-history {
+    width: 80%;
+}
+
+.data-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    gap: .5rem;
+}
+
+.title-history {
+    font-size: 1.7rem;
+}
+
+.p-history {
+    font-size: 1.4rem;
+}
+
+.d-none {
+    display: none;
 }
