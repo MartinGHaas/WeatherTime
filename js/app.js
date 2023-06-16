@@ -70,4 +70,12 @@ async function getLatAPI(lat, lon) {
     addToLocalStorage(city.innerHTML, temp.innerHTML.split(' ')[1]);
 }
 
+input.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' && this === document.activeElement) {
+        callAPI();
+    }
+});
+  
+
+
 // git push -u origin 'Principal(Main)'
