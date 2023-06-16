@@ -13,6 +13,11 @@ const sencacaoTermica = document.getElementById('temp-sensation');
 const wind = document.getElementById('wind-text');
 const max = document.getElementById('max-temp');
 const min = document.getElementById('min-temp');
+const imgDescription = document.getElementById('img-description');
+const weatherImg = document.getElementById('weather-desc');
+const dateDay = document.querySelectorAll('.date-day');
+const dateWeek = document.querySelectorAll('.date-week');
+
 
 const data = document.querySelectorAll('.date-day');
 const weekDay = document.querySelectorAll('.date-week');
@@ -50,6 +55,8 @@ function loadData(data) {
     temp.innerHTML = `Temperatura: ${data.main.temp.toFixed(1)}°C`;
     sencacaoTermica.innerHTML = `Sensação Térmica: ${Math.round(data.main.feels_like)}°C`;
     wind.innerHTML = `Vento: ${(data.wind.speed*3.6).toFixed(1)}km/h`;
+    imgDescription.innerHTML = `${data.weather[0].description}`;
+    weatherImg.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 }
 
 async function getLatAPI(lat, lon) {
@@ -62,3 +69,5 @@ async function getLatAPI(lat, lon) {
     calcHoras(data);
     addToLocalStorage(city.innerHTML, temp.innerHTML.split(' ')[1]);
 }
+
+// git push -u origin 'Principal(Main)'

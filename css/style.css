@@ -244,10 +244,10 @@ body {
 .weather-content {
     width: 93.24%;
     height: 70%;
-    margin-top: 40px;
+    margin-top: 28px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .weather-text {
@@ -257,9 +257,10 @@ body {
 .weather-section {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.wind {
+.left-sided {
     margin-left: auto;
 }
 
@@ -285,6 +286,7 @@ body {
 .date-week {
     font-weight: 800;
     transform: translateY(-8px);
+    text-transform: lowercase;
 }
 
 .max-min-content {
@@ -340,4 +342,27 @@ body {
 
 .d-none {
     display: none;
+}
+
+.weather-img {
+    background: #BDBDBD;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.42);
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-img > img {
+    width: 120%;
+}
+
+.weather-info-section {
+    gap: 1rem;
+}
+
+#img-description {
+    text-transform: capitalize;
 }
